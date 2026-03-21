@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KK - Головна</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <header class="header-section">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="media/logo.jpg" alt="Лого Красті Краб" class="logo-image">
+        <h1 class="logo-text">The Krusty Krab</h1>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Головна</a></li>
+          <li><a href="menu.html" class="nav-link">Меню</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-block">
+          <h1 class="hero-title">Ласкаво просимо у Красті Краб</h1>
+          <div class="hero-buttons">
+            <a href="menu.html" class="button button-primary">ЗАМОВИТИ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-text">
+            <h2 class="section-title section-title-left">Про нас</h2>
+            <p>Красті Краб - це відомий ресторан швидкого харчування у Бікіні Боттом, заснований Містером Крабсом. 
+              Саме тут готують ті самі легендарні крабсбургери, за якими всі з'їжджаються сюди знову і знову. 
+              Наш заклад давно став одним із найвідоміших місць у всьому океані! 
+              Разом із Містером Крабсом у ресторані працюють Спанч Боб і Сквідвард, а також до них кожного дня приходить їх друг Патрік, 
+              якого вже можна вважати теж частиною цього ресторану, тож нудно тут не буває..</p>
+          </div>
+
+          <div class="founder-box">
+            <img src="media/mrKrabs1.jpg" alt="Містер Крабс" class="founder-image">
+            <p class="founder-caption">
+              Засновник — Містер Крабс<br>
+              <span>(рахує ґроши)</span>
+            </p>
+          </div>
+        </div>
+        <div class="reasons-block">
+          <h2 class="section-title">Чому ми найкращі у всьому океані?</h2>
+          <div class="reasons-grid">
+            <article class="reason-card">
+              <h3>У нас найсмачніша їжа, а особливо бургери!</h3>
+              <img src="media/spongebob-and-burger.jpg" alt="Крабсбургер" class="reason-image">
+            </article>
+            <article class="reason-card">
+              <h3>Найкращий персонал і Патрік..</h3>
+              <img src="media/personal1.jpg" alt="Персонал ресторану" class="reason-image">
+            </article>
+            <article class="reason-card">
+              <h3>Ми не виглядаємо як помийне відро :)</h3>
+              <img src="media/chun-bucket.jpg" alt="Chum Bucket" class="reason-image">
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-section">
+    <div class="container">
+      <p class="footer-text">© 2026 The Krusty Krab. Not all rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

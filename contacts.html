@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KK - Контакти</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header-section">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="media/logo.jpg" alt="Лого Красті Краб" class="logo-image">
+        <h1 class="logo-text">The Krusty Krab</h1>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Головна</a></li>
+          <li><a href="menu.html" class="nav-link">Меню</a></li>
+          <li><a href="contacts.html" class="nav-link active">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="staff-section">
+      <div class="container">
+        <div class="staff-block">
+          <h2 class="section-title">Наш персонал</h2>
+          <div class="staff-grid">
+            <article class="staff-card">
+              <img src="media/mrKrabs-staff.jpg" alt="Містер Крабс" class="staff-card-image">
+              <h3 class="staff-card-name">Містер Крабс</h3>
+              <p class="staff-card-role">Власник</p>
+              <p class="staff-card-desc">Любить гроші і не любить Планктона.</p>
+            </article>
+            <article class="staff-card">
+              <img src="media/spongebob-staff.jpg" alt="Спанч Боб" class="staff-card-image">
+              <h3 class="staff-card-name">Спанч Боб</h3>
+              <p class="staff-card-role">Головний кухар</p>
+              <p class="staff-card-desc">Готує найвідоміші бургери у Бікіні Боттом.</p>
+            </article>
+            <article class="staff-card">
+              <img src="media/squidward-staff.jpg" alt="Сквідвард" class="staff-card-image">
+              <h3 class="staff-card-name">Сквідвард</h3>
+              <p class="staff-card-role">Каса та обслуговування</p>
+              <p class="staff-card-desc">Працює без особливого ентузіазму, але зате стабільно.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts-section">
+      <div class="container">
+        <div class="contacts-stack">
+          <div class="contact-card">
+            <h2 class="section-title section-title-left">Маловірогідно, але якщо ще не знаєте, то ось:</h2>
+            <p><strong>Адреса:</strong> Бікіні Боттом, Вулиця Морська, 1</p>
+            <p><strong>Телефон:</strong> +38 (000) 123-45-67</p>
+            <p><strong>Email:</strong> krustykrab@gmail.com</p>
+            <p><strong>Графік роботи:</strong> щодня з 09:00 до 21:00</p>
+          </div>
+          <form class="contact-card" action="#" method="post">
+            <h2 class="section-title section-title-left">Щоб зв'язатись з нами заповнюйте форму:</h2>
+            <label for="name">Ім’я</label>
+            <input type="text" id="name" name="name" placeholder="Ваше ім’я" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            <label for="message">Повідомлення</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення"></textarea>
+            <button type="submit" class="button button-primary">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-section">
+    <div class="container">
+      <p class="footer-text">© 2026 The Krusty Krab. Not all rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
