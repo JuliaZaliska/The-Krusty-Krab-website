@@ -1,20 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const siteNav = document.querySelector(".site-nav");
+  const navBtn = document.querySelector(".nav-btn");
+  const navList = document.querySelector(".nav-list");
 
-  if (menuToggle && siteNav) {
-    menuToggle.addEventListener("click", function () {
-      siteNav.classList.toggle("nav-open");
-
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
+  if (navBtn && navList) {
+    navBtn.addEventListener("click", function () {
+      navList.classList.toggle("open");
     });
 
-    siteNav.querySelectorAll("a").forEach((link) => {
+    navList.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", function () {
-        siteNav.classList.remove("nav-open");
-        menuToggle.setAttribute("aria-expanded", "false");
+        navList.classList.remove("open");
       });
+    });
+
+    document.addEventListener("click", function (event) {
+      const isClickInsideMenu = navList.contains(event.target);
+      const isClickOnButton = navBtn.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnButton) {
+        navList.classList.remove("open");
+      }
     });
   }
 });
