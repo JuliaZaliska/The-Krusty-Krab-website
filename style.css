@@ -294,6 +294,11 @@ h3 {
   margin-left: auto;
 }
 
+.checkout-button {
+    width: 100%;
+    margin-top: 15px;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -403,6 +408,18 @@ h3 {
   border-radius: 14px;
   font: inherit;
 }
+
+
+.api-menu {
+    margin-top: 40px;
+}
+
+#api-menu-list {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 
 /* якщо в меню 3 картки в ряді і сама остання одна, то вона центрується */
 @media (min-width: 880px) {

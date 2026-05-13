@@ -76,6 +76,17 @@ if (document.querySelector("#app") && window.Vue) {
         cart.value = [];
       }
 
+      function checkout() {
+        if (cart.value.length === 0) {
+          return;
+        }
+
+        alert(`Замовлення оформлено! Сума: $${total.value.toFixed(2)}`);
+
+        cart.value = [];
+        showCart.value = false;
+      }
+
       function isAdded(name) {
         return cart.value.some((item) => item.name === name);
       }
@@ -94,8 +105,43 @@ if (document.querySelector("#app") && window.Vue) {
         minus,
         remove,
         clearCart,
+        checkout,
         isAdded
       };
     }
   }).mount("#app");
 }
+
+function loadApiMenu() {
+  const apiMenuList = document.getElementById("api-menu-list");
+
+  if (!apiMenuList) {
+    return;
+  }
+
+  fetch("api/menu.php")
+    .then((response) => response.json())
+    .then((data) => {
+      apiMenuList.innerHTML = "";
+
+      data.items.forEach((item) => {
+        const card = document.createElement("article");
+        card.classList.add("card");
+
+        card.innerHTML = `
+          <h2>${item.name}</h2>
+          <img src="${item.image}" alt="${item.alt}">
+          <h3>$${item.price.toFixed(2)}</h3>
+          <p>${item.description}</p>
+        `;
+
+        apiMenuList.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      apiMenuList.innerHTML = "<p>Не вдалося завантажити меню з API.</p>";
+      console.error(error);
+    });
+}
+
+loadApiMenu();

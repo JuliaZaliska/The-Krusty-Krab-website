@@ -1,0 +1,17 @@
+{
+    "name": "julia/krusty-krab-lab3",
+    "description": "Web lab3 php site",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julia Zaliska",
+            "email": "ta.31.julia.zaliska@gmail.com"
+        }
+    ],
+    "require": {}
+}
